@@ -14,17 +14,17 @@ This project analyzes the demand for job skills and technologies in the US job m
 
 ### Table of Contents
 
-1. Dataset Overview
-2. Technologies and Skills in Demand
-3. Web Scraping Insights
-4. Survey Data Exploration Lab
-5. Outliers Detection and Cleaned Data
-6. Visualizations
-7. Conclusions
+1. [Dataset Overview](Dataset-Overview)
+2. [Technologies and Skills in Demand](Technologies-and-Skills-in-Demand)
+3. [Web Scraping Insights](Web-Scraping-Insights)
+4. [Data Wrangling](Data-Wrangling)
+5. [Exploratory Data Analysis](Exploratory-Data-Analysis)
+6. [Visualizations](Visualizations)
+7. [Conclusions](Conclusions)
 
 ---
 
-### Dataset Overview
+# Dataset Overview
 
 This project makes use of multiple datasets related to job skills and compensation. The data is retrieved via an API and web scraping, covering job roles, key skills, location, compensation frequency, and additional demographic details like gender and age.
 
@@ -39,11 +39,11 @@ Key attributes include:
 
 # Technologies and Skills in Demand
 
-## API Data Retrieval
+### API Data Retrieval
 
 An API call was made to retrieve job data. The function `get_number_of_jobs_T(technology)` was used to filter job postings based on specific technologies (e.g., Python).
 
-## API Usage and Data Processing
+### API Usage and Data Processing
 
 The API call fetches data in **JSON** format, which is common for web APIs returning structured data. The process checks if the API request is successful before attempting to extract the data, ensuring error-free execution. **JSON** is then parsed into Python data structures (like dictionaries and lists) for easy manipulation.
 
@@ -74,16 +74,16 @@ This code can be expanded to analyze trends across different locations, technolo
 
 ---
 
-## Web Scraping Insights
+# Web Scraping Insights
 
 This portion of the code involves scraping data from an HTML table containing salary information for various programming languages. The following components are analyzed:
 
-### Web Scraping Process:
+## Web Scraping Process:
 - **URL Extraction**: The `requests` library is used to pull the raw HTML data from a specified URL.
 - **BeautifulSoup**: The data is parsed using BeautifulSoup's `html.parser` to navigate and extract the relevant portions from the HTML structure.
 - **Table Extraction**: The code locates the first `<table>` tag, extracts its rows (`<tr>`), and then iterates through each row to extract language names and their corresponding salaries.
 
-### Outcome:
+## Outcome:
 - **Languages and Average Salaries**:
   - The scraped data reveals the following average annual salaries for different programming languages:
     - Python: $114,383
@@ -97,7 +97,7 @@ This portion of the code involves scraping data from an HTML table containing sa
 
   This data gives a rough idea of how these programming languages compare in terms of average annual salary.
 
-### Analysis:
+## Analysis:
 - **Salary Insights**:
   - Swift developers appear to have the highest average salary in the dataset, while PHP developers earn the lowest.
   - Python and Java are on the higher end, reflecting their popularity and broad use in both web development and data science.
@@ -105,7 +105,7 @@ This portion of the code involves scraping data from an HTML table containing sa
 - **Real-World Application**:
   - This scraped salary data can be useful for job seekers and companies to benchmark salaries based on language specialization, helping guide decisions about skill development or hiring.
 
-### Limitations of Web Scraping:
+## Limitations of Web Scraping:
 - **Outdated Data**: Since this is a static HTML page, the data may not reflect the latest trends. Using dynamic, real-time sources might offer more accurate insights.
 - **Table Structure Dependence**: If the HTML structure of the page changes, the scraping code will need to be adjusted to continue working effectively.
 
@@ -116,16 +116,16 @@ This portion of the code involves scraping data from an HTML table containing sa
 ## 1. Dataset Overview
 - The dataset contains **11,552 rows and 85 columns**, representing data collected from a global survey of software developers. Key columns include age, country, employment status, and opinions on open-source contributions, among others.
 
-### 2. Geographical Diversity
+## 2. Geographical Diversity
 - There are **135 unique countries** represented, highlighting the global scale of this survey. This opens up opportunities for regional analysis, allowing us to observe trends in employment, education, and compensation across different geographic areas.
 
-### 3. Data Structure
+## 3. Data Structure
 - The dataset features numerical columns such as age (`float64`), which can be analyzed for statistical insights like mean, median, and distribution. The presence of both categorical and numerical data means that we can explore a wide range of developer demographics and experiences.
 - **Missing Data**: Before further analysis, it is essential to handle missing values, which can be done by dropping or imputing where necessary to ensure data integrity.
 
 ---
 
-## Data Wrangling Process
+# Data Wrangling
 
 ### 1. Loading the Dataset into a DataFrame:
 - The dataset is loaded from a URL using `pd.read_csv()`, which brings in the data for wrangling and analysis.
@@ -147,12 +147,12 @@ This portion of the code involves scraping data from an HTML table containing sa
 
 **Summary**: Missing data can be critical. In this case, columns such as Sexuality and Ethnicity are missing a large proportion of their values, which could affect any demographic analysis.
 
-### 5. Work Location Analysis:
+## 5. Work Location Analysis:
 - The `WorkLoc` column contains categorical data about work locations. Missing values are filled with the most frequent value, which in this case is "Office".
 
 **Summary**: Filling missing values with the most frequent category (mode imputation) is a common technique. In this case, "Office" being the most frequent work location aligns with expectations for a survey about professional developers.
 
-### 6. Normalizing Annual Compensation:
+## 6. Normalizing Annual Compensation:
 - The dataset includes information about compensation, with the compensation frequency varying between **Yearly**, **Monthly**, and **Weekly**. The normalization is performed to standardize all compensation data into a yearly figure.
 
 **Summary**: This normalization allows for consistent analysis of compensation. After normalization, the **median annual compensation** was calculated to be **$100,000**.
@@ -168,7 +168,7 @@ This overall approach ensures that the data is clean, consistent, and ready for 
 
 ---
 
-## Exploratory Data Analysis
+# Exploratory Data Analysis
 
 ### Distribution of Converted Compensation
 The first chart represents the distribution of **converted compensation** (i.e., salary). It reveals that the majority of respondents have a compensation in the lower range. The histogram shows a **right-skewed distribution**, meaning that most people earn on the lower side, with a few outliers who earn substantially more.
@@ -176,7 +176,7 @@ The first chart represents the distribution of **converted compensation** (i.e.,
 - The peak of the distribution is near the left, suggesting that most compensations fall below **$100,000**.
 - There are outliers with compensations going up to **$2 million**, which we would analyze further.
 
-# Five-Number Summary for Age
+## Five-Number Summary for Age
 
 ---
 
@@ -256,7 +256,7 @@ The pie chart below shows the top databases respondents wish to learn next year,
 
 ---
 
-## Conclusions
+# Conclusions
 
 ---
 
