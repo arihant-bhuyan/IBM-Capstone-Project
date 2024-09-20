@@ -14,13 +14,13 @@ This project analyzes the demand for job skills and technologies in the US job m
 
 ### Table of Contents
 
-1. [Dataset Overview](Dataset-Overview)
-2. [Technologies and Skills in Demand](Technologies-and-Skills-in-Demand)
-3. [Web Scraping Insights](Web-Scraping-Insights)
-4. [Data Wrangling](Data-Wrangling)
-5. [Exploratory Data Analysis](Exploratory-Data-Analysis)
-6. [Visualizations](Visualizations)
-7. [Conclusions](Conclusions)
+1. [Dataset Overview](#dataset-overview)
+2. [Technologies and Skills in Demand](#technologies-and-skills-in-demand)
+3. [Web Scraping Insights](#web-scraping-insights)
+4. [Data Wrangling](#data-wrangling)
+5. [Exploratory Data Analysis](#exploratory-data-analysis)
+6. [Visualizations](#visualizations)
+7. [Conclusions](#conclusions)
 
 ---
 
