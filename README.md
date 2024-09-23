@@ -138,12 +138,15 @@ This portion of the code involves scraping data from an HTML table containing sa
 ### 3. Checking for Duplicate Rows:
 - Duplicates are checked using the `duplicated()` method.
   - This reveals that **154 duplicate entries** exist in the column "Respondent." You then display these duplicates.
+![image](https://github.com/user-attachments/assets/f4a63280-6911-4026-8c93-b1f273a7e0f0)
 
 **Summary**: Handling duplicates is important for data integrity. These duplicates could skew results, especially when analyzing survey data where each respondent should ideally be unique.
 
 ### 4. Missing Values:
 - The code checks for missing values in each column using `isnull().sum()`.
   - The data shows significant missing values in some columns like **Sexuality (542)**, **Ethnicity (675)**, **Dependents (140)**, and **SurveyEase (14)**.
+![image](https://github.com/user-attachments/assets/16f6827c-439a-44ad-9b6b-5a5d6608762f)
+
 
 **Summary**: Missing data can be critical. In this case, columns such as Sexuality and Ethnicity are missing a large proportion of their values, which could affect any demographic analysis.
 
@@ -175,6 +178,7 @@ The first chart represents the distribution of **converted compensation** (i.e.,
 
 - The peak of the distribution is near the left, suggesting that most compensations fall below **$100,000**.
 - There are outliers with compensations going up to **$2 million**, which we would analyze further.
+![image](https://github.com/user-attachments/assets/e1cac9d6-45e5-4f87-a0d0-2785e3272c21)
 
 ## Five-Number Summary for Age
 
@@ -236,23 +240,35 @@ This indicates that **age** has a slight positive correlation with **compensatio
 ## 1. Compensation Distribution:
 The following histogram illustrates the distribution of compensation across respondents:
 - The majority of respondents have an annual compensation between **$0 - $250,000**.
+![image](https://github.com/user-attachments/assets/777ba693-eb27-4d6f-a3e8-bd31b4466211)
+
 
 ---
 
 ## 2. Age Distribution:
 A boxplot was used to visualize the age distribution of respondents:
 - The **median age is 29 years**, with most respondents falling between **25 and 35 years**. There are a few outliers aged above **50 years**.
+![image](https://github.com/user-attachments/assets/7fc7c5da-53d9-49be-aa27-e91c54e70b91)
 
 ---
 
 ## 3. Scatter Plot - Work Week vs Code Review Hours:
 A scatter plot was created to show the correlation between weekly work hours and code review hours:
 - Most respondents spend **0 to 50 hours** on code reviews and work **0 to 40 hours** per week.
+![image](https://github.com/user-attachments/assets/bff2e77f-92b1-4e41-b720-853bf694b1ae)
 
 ---
 
 ## 4. Pie Chart - Top 5 Databases Respondents Wish to Learn:
 The pie chart below shows the top databases respondents wish to learn next year, with **PostgreSQL** leading at **24.8%**.
+![image](https://github.com/user-attachments/assets/72797f63-7d6f-4c27-a8b3-d7418b77528e)
+
+---
+
+## 5. Median ConvertedComp by Age 
+The line chart below shows the median compensation earned by their respective age between 25 to 30yrs
+![image](https://github.com/user-attachments/assets/590bc40d-a654-4bf2-ae8d-017b51c750a0)
+
 
 ---
 
